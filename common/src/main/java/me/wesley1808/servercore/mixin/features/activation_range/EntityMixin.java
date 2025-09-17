@@ -83,7 +83,7 @@ public class EntityMixin implements Inactive, ActivationEntity {
     // ServerCore - Prevent inactive entities from getting extreme velocities.
     @Inject(method = "push(DDD)V", at = @At("HEAD"), cancellable = true)
     public void servercore$ignorePushingWhileInactive(double x, double y, double z, CallbackInfo ci) {
-        if (this.servercore$isInactive && !this.level.isClientSide) {
+        if (this.servercore$isInactive && !this.level.isClientSide()) {
             ci.cancel();
         }
     }

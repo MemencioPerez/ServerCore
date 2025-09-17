@@ -1,7 +1,5 @@
 package me.wesley1808.servercore.mixin.optimizations.misc;
 
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.contents.PlainTextContents;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -26,21 +24,5 @@ public class MapItemSavedDataMixin {
     )
     private boolean servercore$reduceInventoryIteration(Inventory inventory, Predicate<ItemStack> predicate, Player player, ItemStack stack) {
         return stack.isFramed() || inventory.contains(predicate);
-    }
-
-    @Redirect(
-            method = "tickCarriedBy",
-            require = 0,
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/network/chat/Component;getString()Ljava/lang/String;"
-            )
-    )
-    private String servercore$getPlayerName(Component component) {
-        if (component.getContents() instanceof PlainTextContents plainText) {
-            return plainText.text();
-        }
-
-        return component.getString();
     }
 }

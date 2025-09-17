@@ -11,8 +11,8 @@ accessible field net/minecraft/world/entity/animal/Bee beePollinateGoal Lnet/min
 
 # Commands
 accessible method net/minecraft/world/level/LocalMobCapCalculator$MobCounts <init> ()V
-accessible method net/minecraft/server/level/ChunkMap getChunks ()Ljava/lang/Iterable;
 
+accessible field net/minecraft/server/level/ChunkMap visibleChunkMap Lit/unimi/dsi/fastutil/longs/Long2ObjectLinkedOpenHashMap;
 accessible field net/minecraft/world/level/NaturalSpawner$SpawnState localMobCapCalculator Lnet/minecraft/world/level/LocalMobCapCalculator;
 accessible field net/minecraft/world/level/LocalMobCapCalculator playerMobCounts Ljava/util/Map;
 accessible field net/minecraft/world/level/LocalMobCapCalculator$MobCounts counts Lit/unimi/dsi/fastutil/objects/Object2IntMap;
