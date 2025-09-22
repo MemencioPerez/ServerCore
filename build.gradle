@@ -18,6 +18,15 @@ subprojects {
     repositories {
         maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
         maven { url "https://maven.impactdev.net/repository/development/" }
+
+        maven {
+            name 'luck-repo'
+            url 'https://repo.lucko.me/'
+            content {
+                includeModule 'me.lucko', 'spark-api'
+            }
+        }
+
         mavenCentral()
     }
 
