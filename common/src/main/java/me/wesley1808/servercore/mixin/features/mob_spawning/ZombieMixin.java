@@ -21,11 +21,11 @@ public abstract class ZombieMixin extends Monster {
             method = "hurtServer",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/world/level/GameRules;getBoolean(Lnet/minecraft/world/level/GameRules$Key;)Z"
+                    target = "Lnet/minecraft/server/level/ServerLevel;isSpawningMonsters()Z"
             )
     )
-    private boolean servercore$enforceMobCap(boolean doMobSpawning, ServerLevel level) {
-        return doMobSpawning && Mobcaps.canSpawnForCategory(
+    private boolean servercore$enforceMobCap(boolean canSpawnMonsters, ServerLevel level) {
+        return canSpawnMonsters && Mobcaps.canSpawnForCategory(
                 level,
                 this.chunkPosition(),
                 EntityType.ZOMBIE.getCategory(),
