@@ -5,6 +5,7 @@ import me.wesley1808.servercore.common.services.platform.ModPlatform;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.fml.loading.LoadingModList;
 
@@ -22,7 +23,7 @@ public class NeoForgeModPlatform implements ModPlatform {
 
     @Override
     public boolean isClient() {
-        return FMLEnvironment.dist.isClient();
+        return FMLEnvironment.getDist().isClient();
     }
 
     @Override
@@ -32,7 +33,7 @@ public class NeoForgeModPlatform implements ModPlatform {
             return modList.isLoaded(modId);
         }
 
-        LoadingModList loadingModList = LoadingModList.get();
+        LoadingModList loadingModList = FMLLoader.getCurrent().getLoadingModList();
         return loadingModList != null && loadingModList.getModFileById(modId) != null;
     }
 
