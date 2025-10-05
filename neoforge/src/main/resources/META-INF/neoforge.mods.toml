@@ -29,6 +29,6 @@ side = "BOTH"
 [[dependencies.servercore]]
 modId = "neoforge"
 required = true
-versionRange = "[21.8.18,)"
+versionRange = "[21.9.14-beta,)"
 ordering = "NONE"
 side = "BOTH"
