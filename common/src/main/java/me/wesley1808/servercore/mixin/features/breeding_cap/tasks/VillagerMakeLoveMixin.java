@@ -6,7 +6,7 @@ import me.wesley1808.servercore.common.config.data.breeding_cap.BreedingCap;
 import me.wesley1808.servercore.common.config.data.breeding_cap.BreedingCapConfig;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.ai.behavior.VillagerMakeLove;
-import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.npc.villager.Villager;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -16,11 +16,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class VillagerMakeLoveMixin {
 
     @Inject(
-            method = "tick(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)V",
+            method = "tick(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/villager/Villager;J)V",
             cancellable = true,
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/world/entity/npc/Villager;eatAndDigestFood()V",
+                    target = "Lnet/minecraft/world/entity/npc/villager/Villager;eatAndDigestFood()V",
                     ordinal = 0
             )
     )

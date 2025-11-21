@@ -2,7 +2,7 @@ package me.wesley1808.servercore.mixin.features.ender_pearls;
 
 import me.wesley1808.servercore.common.config.Config;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.projectile.ThrownEnderpearl;
+import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEnderpearl;
 import net.minecraft.world.level.storage.ValueInput;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

@@ -1,13 +1,13 @@
 accessWidener v1 named
 
 # Entity Activation Range
-accessible method net/minecraft/world/entity/animal/Bee$BeePollinateGoal isPollinating ()Z
-accessible method net/minecraft/world/entity/projectile/AbstractArrow isInGround ()Z
+accessible method net/minecraft/world/entity/animal/bee/Bee$BeePollinateGoal isPollinating ()Z
+accessible method net/minecraft/world/entity/projectile/arrow/AbstractArrow isInGround ()Z
 
 accessible field net/minecraft/world/entity/LivingEntity jumping Z
 accessible field net/minecraft/world/entity/Mob goalSelector Lnet/minecraft/world/entity/ai/goal/GoalSelector;
 accessible field net/minecraft/world/entity/Mob targetSelector Lnet/minecraft/world/entity/ai/goal/GoalSelector;
-accessible field net/minecraft/world/entity/animal/Bee beePollinateGoal Lnet/minecraft/world/entity/animal/Bee$BeePollinateGoal;
+accessible field net/minecraft/world/entity/animal/bee/Bee beePollinateGoal Lnet/minecraft/world/entity/animal/bee/Bee$BeePollinateGoal;
 
 # Commands
 accessible method net/minecraft/world/level/LocalMobCapCalculator$MobCounts <init> ()V
@@ -38,4 +38,4 @@ accessible field net/minecraft/world/level/chunk/LevelChunk loaded Z
 # Forge
 accessible class net/minecraft/world/level/LocalMobCapCalculator$MobCounts
 accessible class net/minecraft/world/level/NaturalSpawner$SpawnState
-accessible class net/minecraft/world/entity/animal/Bee$BeePollinateGoal
+accessible class net/minecraft/world/entity/animal/bee/Bee$BeePollinateGoal

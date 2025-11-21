@@ -5,7 +5,7 @@ import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import me.wesley1808.servercore.common.config.Config;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.projectile.ThrownEnderpearl;
+import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEnderpearl;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
@@ -16,7 +16,7 @@ public class ThrownEnderPearlMixin {
             method = "tick",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/world/entity/projectile/ThrownEnderpearl;isAlive()Z",
+                    target = "Lnet/minecraft/world/entity/projectile/throwableitemprojectile/ThrownEnderpearl;isAlive()Z",
                     ordinal = 0
             )
     )

@@ -105,7 +105,7 @@ public class ServerChunkCacheMixin {
             require = 0,
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/Util;shuffle(Ljava/util/List;Lnet/minecraft/util/RandomSource;)V"
+                    target = "Lnet/minecraft/util/Util;shuffle(Ljava/util/List;Lnet/minecraft/util/RandomSource;)V"
             )
     )
     private void servercore$cancelShuffle(List<LevelChunk> spawningChunks, RandomSource randomSource) {

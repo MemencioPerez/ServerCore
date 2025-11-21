@@ -5,7 +5,7 @@ import me.wesley1808.servercore.common.utils.ChunkManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.animal.Bee;
+import net.minecraft.world.entity.animal.bee.Bee;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
@@ -26,7 +26,7 @@ public abstract class BeeMixin extends Animal {
             method = "getBeehiveBlockEntity",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/world/entity/animal/Bee;isTooFarAway(Lnet/minecraft/core/BlockPos;)Z"
+                    target = "Lnet/minecraft/world/entity/animal/bee/Bee;isTooFarAway(Lnet/minecraft/core/BlockPos;)Z"
             )
     )
     private boolean servercore$onlyFetchHiveIfLoaded(boolean isTooFarAway) {

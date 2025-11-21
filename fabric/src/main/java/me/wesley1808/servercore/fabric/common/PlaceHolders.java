@@ -7,7 +7,7 @@ import eu.pb4.placeholders.api.PlaceholderResult;
 import eu.pb4.placeholders.api.Placeholders;
 import me.wesley1808.servercore.common.dynamic.DynamicSetting;
 import me.wesley1808.servercore.common.utils.statistics.Statistics;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 
 import java.util.Objects;
@@ -82,6 +82,6 @@ public class PlaceHolders {
     }
 
     private static void register(String name, PlaceholderHandler handler) {
-        Placeholders.register(ResourceLocation.fromNamespaceAndPath("servercore", name), handler);
+        Placeholders.register(Identifier.fromNamespaceAndPath("servercore", name), handler);
     }
 }
